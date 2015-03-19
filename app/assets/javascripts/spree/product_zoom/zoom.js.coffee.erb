@@ -1,5 +1,5 @@
 add_image_handlers = ->
-  ($ '#main-image').data 'selectedThumb', ($ '#main-image img').attr('src')
+  ($ '#main-image').data 'selectedThumb', ($ '#main-image img.zoom-click').attr('src')
   ($ 'ul.thumbnails li').eq(0).addClass 'selected'
   ($ 'ul.thumbnails a').on 'click', (event) ->
     ($ '#main-image').data 'selectedThumb', ($ event.currentTarget).attr('href')
